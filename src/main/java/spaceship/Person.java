@@ -1,5 +1,6 @@
 package spaceship;
 
+import java.util.Objects;
 import java.util.UUID;
 
 public class Person {
@@ -9,12 +10,12 @@ public class Person {
     private int phoneNumber;
     private Passport passport;
 
-    public Person(UUID id,String name, String email, int phoneNumber, int passportNumber) {
+    public Person(UUID id,String name, String email, int phoneNumber, Passport passport) {
         this.id = UUID.randomUUID().toString();
         this.name = name;
         this.email = email;
         this.phoneNumber = phoneNumber;
-        this.passportNumber = passportNumber;
+        this.passport = passport;
     }
 
     public String getId() {

@@ -1,5 +1,8 @@
 package spaceship;
 
+import java.util.Arrays;
+import java.util.Objects;
+
 public class Spaceship {
     private Make make;
     private String model;
@@ -11,7 +14,7 @@ public class Spaceship {
         this.make = make;
         this.model = model;
         this.capacity = capacity;
-        this.passengers = passengers[capacity];
+        this.passengers = new Person[capacity];
     }
 
     public Make getMake() {
