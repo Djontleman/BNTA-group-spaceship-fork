@@ -9,4 +9,7 @@ package spaceship;
 //        Option 6 Cancel a flight
 
 public class Main {
+    public static void main(String[] args) {
+
+    }
 }
