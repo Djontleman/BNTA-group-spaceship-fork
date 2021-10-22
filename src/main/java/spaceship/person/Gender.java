@@ -1,4 +1,4 @@
-package spaceship;
+package spaceship.person;
 
 public enum Gender {
     FEMALE,
