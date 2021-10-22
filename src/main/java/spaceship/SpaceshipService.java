@@ -2,6 +2,8 @@ package spaceship;
 
 import spaceship.person.Person;
 
+import java.util.Arrays;
+
 public class SpaceshipService {
     //method to add new person
     public void addPerson (Spaceship spaceship1, Person person1){
@@ -15,9 +17,9 @@ public class SpaceshipService {
         }
     }
 
-    public void removePerson (SpaceshipService spaceship1, Person person1) {
-        Person[] passengers = spaceship1.getPassengers();
-        Arrays.asList(passengers).contains(person1.getId());
-        ArrayUtils.remove(passengers, person1);
-    }
+//    public void removePerson (SpaceshipService spaceship1, Person person1) {
+//        Person[] passengers = spaceship1.getPassengers();
+//        Arrays.asList(passengers).contains(person1.getId());
+//        ArrayUtils.remove(passengers, person1);
+//    }
 }
