@@ -10,6 +10,16 @@ package spaceship;
 
 public class Main {
     public static void main(String[] args) {
+        Passport vinhPassport = new Passport(
+                "Vinh Chu", Gender.MALE, Nationality.CHINESE, 3, true, LocalDate.of(1950, Month.APRIL, 12)
+        );
+        Person vinh = new Person("Vinh Chu", "email@email.email", 1800033333, vinhPassport);
+
+        Spaceship ussEnterprise = new Spaceship(Make.USSENTERPRISE, "xcv330", 950);
+
+        SpaceshipService spaceshipService = new SpaceshipService();
+        spaceshipService.addPerson(ussEnterprise, vinh);
+        System.out.println(ussEnterprise);
 
     }
 }

@@ -14,4 +14,10 @@ public class SpaceshipService {
             System.out.println("Sorry, we're full");
         }
     }
+
+    public void removePerson (SpaceshipService spaceship1, Person person1) {
+        Person[] passengers = spaceship1.getPassengers();
+        Arrays.asList(passengers).contains(person1.getId());
+        ArrayUtils.remove(passengers, person1);
+    }
 }
