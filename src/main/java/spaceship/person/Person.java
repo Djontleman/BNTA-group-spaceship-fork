@@ -1,4 +1,6 @@
-package spaceship;
+package spaceship.person;
+
+import spaceship.passport.Passport;
 
 import java.util.Objects;
 import java.util.UUID;

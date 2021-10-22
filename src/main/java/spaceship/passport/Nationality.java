@@ -1,4 +1,4 @@
-package spaceship;
+package spaceship.passport;
 
 public enum Nationality {
     CHINESE,

@@ -1,5 +1,7 @@
 package spaceship;
 
+import spaceship.person.Person;
+
 import java.util.Arrays;
 import java.util.Objects;
 
