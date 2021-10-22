@@ -44,5 +44,7 @@ public class Main {
 //
 //        System.out.println(ussEnterprise);
 
+        BookingSystem bookingSystem = new BookingSystem();
+        bookingSystem.start();
     }
 }
