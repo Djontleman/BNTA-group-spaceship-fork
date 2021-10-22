@@ -81,7 +81,7 @@ public class Passport {
                 ", dateOfBirth=" + dateOfBirth +
                 '}';
     }
-
+//check if equal
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
