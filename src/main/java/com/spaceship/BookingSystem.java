@@ -1,4 +1,4 @@
-package spaceship;
+package com.spaceship;
 
 //UI area (user creates their person account here)
 

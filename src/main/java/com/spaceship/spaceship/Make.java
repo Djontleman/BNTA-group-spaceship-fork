@@ -1,4 +1,4 @@
-package spaceship;
+package com.spaceship.spaceship;
 
 public enum Make {
     TESLA,

@@ -1,4 +1,4 @@
-package spaceship;
+package com.spaceship;
 
 //     Display the list of available options such as:
 //        Option 1 Add new Flight
@@ -7,14 +7,6 @@ package spaceship;
 //        Option 4 Display flight for a specific user
 //        Option 5 Book a flight for a user using his id
 //        Option 6 Cancel a flight
-
-import spaceship.passport.Nationality;
-import spaceship.passport.Passport;
-import spaceship.person.Gender;
-import spaceship.person.Person;
-
-import java.time.LocalDate;
-import java.time.Month;
 
 public class Main {
     public static void main(String[] args) {
