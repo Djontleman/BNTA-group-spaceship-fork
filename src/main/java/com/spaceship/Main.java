@@ -1,15 +1,24 @@
 package com.spaceship;
 
 //     Display the list of available options such as:
-//        Option 1 Add new Flight
 //        Option 2 Display all flights
 //        Option 3 Display Booked Flights
 //        Option 4 Display flight for a specific user
 //        Option 5 Book a flight for a user using his id
 //        Option 6 Cancel a flight
 
+import com.spaceship.passport.Nationality;
+import com.spaceship.passport.Passport;
+import com.spaceship.person.Gender;
+import com.spaceship.person.Person;
+
+import java.io.IOException;
+import java.time.LocalDate;
+import java.time.Month;
+import java.util.Arrays;
+
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
 //        Passport vinhPassport = new Passport(
 //                "Vinh Chu", Gender.MALE, Nationality.CHINESE, 3, true, LocalDate.of(1950, Month.APRIL, 12)
 //        );
@@ -21,10 +30,14 @@ public class Main {
 //        Passport jonathanPassport = new Passport(
 //                "Jonathan Hutchinson", Gender.MALE, Nationality.SPANISH, 1, true, LocalDate.of(1950, Month.APRIL, 12)
 //        );
-//
+////
 //        Person vinh = new Person("Vinh Chu", "email@email.email", 1800033333, vinhPassport);
 //        Person tamara = new Person("Tamara Herrington", "email@gmail.email", 123455678, tamaraPassport);
 //        Person jonathan = new Person("Jonathan Hutchinson", "email@yahoo.email", 987654432, jonathanPassport);
+////      Store each person object in an array
+//        Person[] people = {vinh, tamara, jonathan};
+//        System.out.println(Arrays.toString(people));
+
 //
 //
 //        Spaceship ussEnterprise = new Spaceship(Make.USSENTERPRISE, "xcv330", 2);
@@ -36,7 +49,7 @@ public class Main {
 //
 //        System.out.println(ussEnterprise);
 
-        BookingSystem bookingSystem = new BookingSystem();
-        bookingSystem.start();
+//        BookingSystem bookingSystem = new BookingSystem();
+//        bookingSystem.start();
     }
 }
