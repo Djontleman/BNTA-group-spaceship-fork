@@ -11,6 +11,9 @@ import com.spaceship.passport.Nationality;
 import com.spaceship.passport.Passport;
 import com.spaceship.person.Gender;
 import com.spaceship.person.Person;
+import com.spaceship.spaceship.Make;
+import com.spaceship.spaceship.Spaceship;
+import com.spaceship.spaceship.SpaceshipService;
 
 import java.io.IOException;
 import java.time.LocalDate;
@@ -40,9 +43,12 @@ public class Main {
 
 //
 //
-//        Spaceship ussEnterprise = new Spaceship(Make.USSENTERPRISE, "xcv330", 2);
-//
-//        SpaceshipService spaceshipService = new SpaceshipService();
+        Spaceship ussEnterprise = new Spaceship(Make.USSENTERPRISE, "xcv330", 2);
+
+        SpaceshipService spaceshipService = new SpaceshipService();
+        Spaceship[] listOfFlights = {ussEnterprise};
+        SpaceshipService.showFlights(listOfFlights);
+
 //        spaceshipService.addPerson(ussEnterprise, vinh);
 //        spaceshipService.addPerson(ussEnterprise, tamara);
 //        spaceshipService.addPerson(ussEnterprise, jonathan);
