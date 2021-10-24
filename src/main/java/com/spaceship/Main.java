@@ -14,8 +14,9 @@ import com.spaceship.passport.Nationality;
 import com.spaceship.passport.Passport;
 import com.spaceship.person.Gender;
 import com.spaceship.person.Person;
-import com.spaceship.spaceship.Make;
+
 import com.spaceship.spaceship.Spaceship;
+import com.spaceship.usersession.UserSession;
 
 import java.io.IOException;
 import java.time.LocalDate;
@@ -38,9 +39,9 @@ public class Main {
         Person vinh = new Person("Vinh Chu", "email@email.email", 1800033333, vinhPassport);
         Person tamara = new Person("Tamara Herrington", "email@gmail.email", 123455678, tamaraPassport);
         Person jonathan = new Person("Jonathan Hutchinson", "email@yahoo.email", 987654432, jonathanPassport);
-        Person[] people = {vinh, tamara, jonathan};
 
-        Spaceship ussEnterprise = new Spaceship(Make.USSENTERPRISE, "xcv330", 2);
+
+//
 
 //        SpaceshipService spaceshipService = new SpaceshipService();
 //        Spaceship[] listOfFlights = {ussEnterprise};
@@ -52,9 +53,13 @@ public class Main {
 //
 //        System.out.println(ussEnterprise);
 
-        Flight flights = new Flight(ussEnterprise, FlightJourney.EARTHTOMARS);
-        System.out.println(flights);
+//        Flight flights = new Flight(ussEnterprise, FlightJourney.EARTHTOMARS);
+//        System.out.println(flights);
 //        BookingSystem bookingSystem = new BookingSystem();
 //        bookingSystem.start();
+
+
+        UserSession userSession = new UserSession();
+        userSession.start();
     }
 }
