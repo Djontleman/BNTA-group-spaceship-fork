@@ -7,18 +7,9 @@ package com.spaceship;
 //        Option 5 Book a flight for a user using his id
 //        Option 6 Cancel a flight
 
-import com.spaceship.passport.Nationality;
-import com.spaceship.passport.Passport;
-import com.spaceship.person.Gender;
-import com.spaceship.person.Person;
-import com.spaceship.spaceship.Make;
-import com.spaceship.spaceship.Spaceship;
-import com.spaceship.spaceship.SpaceshipService;
+import com.spaceship.booking.BookingSystem;
 
 import java.io.IOException;
-import java.time.LocalDate;
-import java.time.Month;
-import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) throws IOException {
@@ -43,11 +34,11 @@ public class Main {
 
 //
 //
-        Spaceship ussEnterprise = new Spaceship(Make.USSENTERPRISE, "xcv330", 2);
-
-        SpaceshipService spaceshipService = new SpaceshipService();
-        Spaceship[] listOfFlights = {ussEnterprise};
-        SpaceshipService.showFlights(listOfFlights);
+//        Spaceship ussEnterprise = new Spaceship(Make.USSENTERPRISE, "xcv330", 2);
+//
+//        SpaceshipService spaceshipService = new SpaceshipService();
+//        Spaceship[] listOfFlights = {ussEnterprise};
+//        SpaceshipService.showFlights(listOfFlights);
 
 //        spaceshipService.addPerson(ussEnterprise, vinh);
 //        spaceshipService.addPerson(ussEnterprise, tamara);
@@ -55,7 +46,7 @@ public class Main {
 //
 //        System.out.println(ussEnterprise);
 
-//        BookingSystem bookingSystem = new BookingSystem();
-//        bookingSystem.start();
+        BookingSystem bookingSystem = new BookingSystem();
+        bookingSystem.start();
     }
 }
