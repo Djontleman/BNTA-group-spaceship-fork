@@ -6,9 +6,6 @@ import java.util.Arrays;
 
 public class SpaceshipService {
 
-//    public static void addFlight() {
-//
-//    }
 }
 
 

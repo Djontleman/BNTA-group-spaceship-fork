@@ -5,10 +5,6 @@ import com.spaceship.spaceship.Spaceship;
 
 public class FlightService {
 
-    public void addFlight(Flight spaceship) {
-
-    }
-
     // Method to add new person to flight
     public void addPerson (Flight flight1, Person person1){
         if (flight1.getCount() < flight1.getCapacity()){
