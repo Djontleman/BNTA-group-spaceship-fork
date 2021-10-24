@@ -1,6 +1,6 @@
 package com.spaceship.spaceship;
 
-public enum Spaceshipenum {
+public enum SpaceshipEnum {
     TESLA("Tesla", "model",5),
     AMAZON("Amazon", "model", 4),
     USSENTERPRISE("USSEnterprise","FederationStarship", 950 ),
@@ -10,7 +10,7 @@ public enum Spaceshipenum {
     private final String model;
     private final int capacity;
 
-    private Spaceshipenum(String brand, String model, int capacity) {
+    private SpaceshipEnum(String brand, String model, int capacity) {
         this.brand = brand;
         this.model = model;
         this.capacity = capacity;
