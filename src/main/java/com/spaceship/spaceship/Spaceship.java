@@ -6,56 +6,70 @@ import java.util.Arrays;
 import java.util.Objects;
 
 public class Spaceship {
-    private enum Spaceshipenum;
-    private Person[] passengers;
-    private int count;
+    private String callSign;
+    private String brand;
+    private String model;
+    private int capacity;
 
-    public Spaceship(Spaceshipenum spaceshipenum) {
-        this.Spaceshipenum
-        this.passengers = new Person[capacity];
+    public Spaceship(String callSign, SpaceshipEnum spaceshipEnum) {
+        this.callSign = callSign;
+        this.brand = spaceshipEnum.getBrand();
+        this.model = spaceshipEnum.getModel();
+        this.capacity = spaceshipEnum.getCapacity();
     }
 
-
+    public String getCallSign() {
+        return callSign;
     }
 
-    public Person[] getPassengers() {
-        return passengers;
+    public void setCallSign(String callSign) {
+        this.callSign = callSign;
     }
 
-    public void setPassengers(Person[] passengers) {
-        this.passengers = passengers;
+    public String getBrand() {
+        return brand;
     }
 
-    public int getCount() {
-        return count;
+    public void setBrand(String brand) {
+        this.brand = brand;
     }
 
-    public void setCount(int count) {
-        this.count = count;
+    public String getModel() {
+        return model;
     }
 
-    @java.lang.Override
-    public java.lang.String toString() {
+    public void setModel(String model) {
+        this.model = model;
+    }
+
+    public int getCapacity() {
+        return capacity;
+    }
+
+    public void setCapacity(int capacity) {
+        this.capacity = capacity;
+    }
+
+    @Override
+    public String toString() {
         return "Spaceship{" +
-                "make=" + make +
+                "callSign='" + callSign + '\'' +
+                ", brand='" + brand + '\'' +
                 ", model='" + model + '\'' +
                 ", capacity=" + capacity +
-                ", passengers=" + java.util.Arrays.toString(passengers) +
-                ", count=" + count +
                 '}';
     }
 
-    public boolean equals(Object object) {
-        if (this == object) return true;
-        if (object == null || getClass() != object.getClass()) return false;
-        if (!super.equals(object)) return false;
-        Spaceship spaceship = (Spaceship) object;
-        return capacity == spaceship.capacity && count == spaceship.count && java.util.Objects.equals(make, spaceship.make) && java.util.Objects.equals(model, spaceship.model) && java.util.Arrays.equals(passengers, spaceship.passengers);
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Spaceship spaceship = (Spaceship) o;
+        return capacity == spaceship.capacity && Objects.equals(callSign, spaceship.callSign) && Objects.equals(brand, spaceship.brand) && Objects.equals(model, spaceship.model);
     }
 
+    @Override
     public int hashCode() {
-        int result = Objects.hash(super.hashCode(), make, model, capacity, count);
-        result = 31 * result + Arrays.hashCode(passengers);
-        return result;
+        return Objects.hash(callSign, brand, model, capacity);
     }
 }
