@@ -12,6 +12,7 @@ public class Flight {
     private String spaceshipCallSign;
     private int capacity;
     private Person[] passengers;
+    private int count;
     private FlightJourney flightJourney;
 
     public Flight(Spaceship spaceship, FlightJourney flightJourney) {
@@ -19,6 +20,7 @@ public class Flight {
         this.spaceshipCallSign = spaceship.getCallSign();
         this.capacity = spaceship.getCapacity();
         this.passengers = new Person[capacity];
+        this.count = 0;
         this.flightJourney = flightJourney;
     }
 
@@ -54,6 +56,14 @@ public class Flight {
         this.passengers = passengers;
     }
 
+    public int getCount() {
+        return count;
+    }
+
+    public void setCount(int count) {
+        this.count = count;
+    }
+
     public FlightJourney getFlightJourney() {
         return flightJourney;
     }
@@ -69,6 +79,7 @@ public class Flight {
                 ", spaceshipCallSign='" + spaceshipCallSign + '\'' +
                 ", capacity=" + capacity +
                 ", passengers=" + Arrays.toString(passengers) +
+                ", count=" + count +
                 ", flightJourney=" + flightJourney +
                 '}';
     }
@@ -78,12 +89,12 @@ public class Flight {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Flight flight = (Flight) o;
-        return capacity == flight.capacity && Objects.equals(spaceship, flight.spaceship) && Objects.equals(spaceshipCallSign, flight.spaceshipCallSign) && Arrays.equals(passengers, flight.passengers) && flightJourney == flight.flightJourney;
+        return capacity == flight.capacity && count == flight.count && Objects.equals(spaceship, flight.spaceship) && Objects.equals(spaceshipCallSign, flight.spaceshipCallSign) && Arrays.equals(passengers, flight.passengers) && flightJourney == flight.flightJourney;
     }
 
     @Override
     public int hashCode() {
-        int result = Objects.hash(spaceship, spaceshipCallSign, capacity, flightJourney);
+        int result = Objects.hash(spaceship, spaceshipCallSign, capacity, count, flightJourney);
         result = 31 * result + Arrays.hashCode(passengers);
         return result;
     }
