@@ -6,41 +6,16 @@ import java.util.Arrays;
 import java.util.Objects;
 
 public class Spaceship {
-    private Make make;
-    private String model;
-    private int capacity;
+    private enum Spaceshipenum;
     private Person[] passengers;
     private int count;
 
-    public Spaceship(Make make, String model, int capacity) {
-        this.make = make;
-        this.model = model;
-        this.capacity = capacity;
+    public Spaceship(Spaceshipenum spaceshipenum) {
+        this.Spaceshipenum
         this.passengers = new Person[capacity];
     }
 
-    public Make getMake() {
-        return make;
-    }
 
-    public void setMake(Make make) {
-        this.make = make;
-    }
-
-    public String getModel() {
-        return model;
-    }
-
-    public void setModel(String model) {
-        this.model = model;
-    }
-
-    public int getCapacity() {
-        return capacity;
-    }
-
-    public void setCapacity(int capacity) {
-        this.capacity = capacity;
     }
 
     public Person[] getPassengers() {
