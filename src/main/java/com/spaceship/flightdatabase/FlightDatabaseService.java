@@ -12,4 +12,9 @@ public class FlightDatabaseService {
     // - listOpenFlights
     // - getFullFlights
     // - listFullFlights
+
+// Method to list all flights (not finished)
+    //    public static void showFlights (Spaceship[] listOfFlights) {
+//        System.out.println(Arrays.toString(listOfFlights));
+//    }
 }
