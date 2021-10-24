@@ -7,5 +7,7 @@ public enum FlightJourney {
     VENUSTOEARTH,
     VENUSTOMARS,
     MARSTOVENUS,
+    EARTHTOVULCAN,
+    VULCANTOEARTH,
 
 }
