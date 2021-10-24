@@ -1,18 +1,21 @@
 package com.spaceship.flight;
 
+import com.spaceship.person.Person;
 import com.spaceship.spaceship.Spaceship;
+
+import java.util.Arrays;
 
 public class Flight {
 
     private Spaceship spaceship;
     private int capacity;
-    private String[] passengerIds;
+    private Person[] passengerIDs;
     private FlightJourney flightJourney;
 
     public Flight(Spaceship spaceship, FlightJourney flightJourney) {
         this.spaceship = spaceship;
         this.capacity = spaceship.getCapacity();
-        this.passengerIds = new String[spaceship.getCapacity()];
+        this.passengerIDs = new Person[capacity];
         this.flightJourney = flightJourney;
     }
 
@@ -32,12 +35,12 @@ public class Flight {
         this.capacity = capacity;
     }
 
-    public String[] getPassengerIds() {
-        return passengerIds;
+    public Person[] getPassengerIDs() {
+        return passengerIDs;
     }
 
-    public void setPassengerIds(String[] passengerIds) {
-        this.passengerIds = passengerIds;
+    public void setPassengerIDs(Person[] passengerIDs) {
+        this.passengerIDs = passengerIDs;
     }
 
     public FlightJourney getFlightJourney() {
@@ -46,5 +49,15 @@ public class Flight {
 
     public void setFlightJourney(FlightJourney flightJourney) {
         this.flightJourney = flightJourney;
+    }
+
+    @Override
+    public String toString() {
+        return "Flight{" +
+                "spaceship=" + spaceship +
+                ", capacity=" + capacity +
+                ", passengerIDs=" + Arrays.toString(passengerIDs) +
+                ", flightJourney=" + flightJourney +
+                '}';
     }
 }
