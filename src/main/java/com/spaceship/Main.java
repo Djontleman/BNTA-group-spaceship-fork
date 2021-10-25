@@ -41,22 +41,9 @@ public class Main {
         Person jonathan = new Person("Jonathan Hutchinson", "email@yahoo.email", 987654432, jonathanPassport);
 
 
-//
 
-//        SpaceshipService spaceshipService = new SpaceshipService();
-//        Spaceship[] listOfFlights = {ussEnterprise};
-//        SpaceshipService.showFlights(listOfFlights);
 
-//        spaceshipService.addPerson(ussEnterprise, vinh);
-//        spaceshipService.addPerson(ussEnterprise, tamara);
-//        spaceshipService.addPerson(ussEnterprise, jonathan);
-//
-//        System.out.println(ussEnterprise);
 
-//        Flight flights = new Flight(ussEnterprise, FlightJourney.EARTHTOMARS);
-//        System.out.println(flights);
-//        BookingSystem bookingSystem = new BookingSystem();
-//        bookingSystem.start();
 
 
         UserSession userSession = new UserSession();

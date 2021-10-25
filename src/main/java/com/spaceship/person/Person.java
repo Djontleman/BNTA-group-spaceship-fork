@@ -68,7 +68,7 @@ public class Person {
                 ", name='" + name + '\'' +
                 ", email='" + email + '\'' +
                 ", phoneNumber=" + phoneNumber +
-                ", passport=" + passport +
+                ", passport=" + passport.getPassportNumber() +
                 '}';
     }
 
