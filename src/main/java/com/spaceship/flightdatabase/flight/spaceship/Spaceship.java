@@ -1,8 +1,5 @@
-package com.spaceship.spaceship;
+package com.spaceship.flightdatabase.flight.spaceship;
 
-import com.spaceship.person.Person;
-
-import java.util.Arrays;
 import java.util.Objects;
 
 public class Spaceship {

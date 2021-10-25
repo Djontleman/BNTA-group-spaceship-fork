@@ -1,7 +1,7 @@
 package com.spaceship.usersession;
 
 import com.spaceship.booking.BookingSystem;
-import com.spaceship.flight.Flight;
+import com.spaceship.flightdatabase.flight.Flight;
 import com.spaceship.flightdatabase.FlightDatabase;
 
 import java.io.IOException;

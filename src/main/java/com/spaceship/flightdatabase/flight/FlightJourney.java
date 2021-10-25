@@ -1,4 +1,4 @@
-package com.spaceship.flight;
+package com.spaceship.flightdatabase.flight;
 
 public enum FlightJourney {
     EARTHTOMARS,

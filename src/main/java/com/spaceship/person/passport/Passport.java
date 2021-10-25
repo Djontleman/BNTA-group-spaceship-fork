@@ -1,4 +1,4 @@
-package com.spaceship.passport;
+package com.spaceship.person.passport;
 
 import com.spaceship.person.Gender;
 

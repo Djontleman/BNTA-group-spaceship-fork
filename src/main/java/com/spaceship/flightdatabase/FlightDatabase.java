@@ -25,12 +25,10 @@ package com.spaceship.flightdatabase;
 //        ArrayUtils.remove(passengers, person1);
 //    }
 
-import com.spaceship.flight.Flight;
+import com.spaceship.flightdatabase.flight.Flight;
 import com.spaceship.person.Person;
-import com.spaceship.spaceship.Spaceship;
 
 import java.util.Arrays;
-import java.util.UUID;
 
 public class FlightDatabase {
     private Flight[] allFlights;

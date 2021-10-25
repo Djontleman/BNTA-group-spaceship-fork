@@ -1,6 +1,4 @@
-package com.spaceship.spaceship;
-
-import com.spaceship.person.Person;
+package com.spaceship.flightdatabase.flight.spaceship;
 
 public class SpaceshipService {
 

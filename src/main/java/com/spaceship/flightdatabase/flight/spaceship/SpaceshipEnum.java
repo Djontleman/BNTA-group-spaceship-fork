@@ -1,4 +1,4 @@
-package com.spaceship.spaceship;
+package com.spaceship.flightdatabase.flight.spaceship;
 
 public enum SpaceshipEnum {
     TESLA("Tesla", "model",5),
