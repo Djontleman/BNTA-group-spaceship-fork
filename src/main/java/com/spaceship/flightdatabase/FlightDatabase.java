@@ -39,12 +39,7 @@ public FlightDatabase(){
     this.allFlights = new Flight[Flight.count];
 }
 
-    @Override
-    public String toString() {
-        return "FlightDatabase{" +
-                "allFlights=" + Arrays.toString(allFlights) +
-                '}';
-    }
+
 
     //add flight to array and then plus1 to the next spot in the array for the next flight
     public void addFlight(Flight flight1) {
@@ -56,5 +51,11 @@ public FlightDatabase(){
 
     public Flight[] getAllFlights() {
         return allFlights;
+    }  @Override
+    public String toString() {
+        return "FlightDatabase{" +
+                "allFlights=" + Arrays.toString(allFlights) +
+                '}';
     }
 }
+

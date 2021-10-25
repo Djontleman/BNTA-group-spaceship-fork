@@ -50,8 +50,7 @@ public class Main {
         flightDatabase.addFlight(testFlight);
         flightDatabase.addFlight(testFlight2);
         System.out.println(flightDatabase);
-        System.out.println(spaceship1);
-        System.out.println(testFlight);
+        System.out.println(flightDatabase.getAllFlights());
 
 
 
