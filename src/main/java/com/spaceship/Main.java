@@ -47,19 +47,25 @@ public class Main {
         Flight testFlight2 = new Flight(spaceship1, FlightJourney.EARTHTOVULCAN);
 
         FlightDatabase flightDatabase = new FlightDatabase();
+        flightDatabase.addUser(vinh);
+        flightDatabase.addUser(tamara);
+        flightDatabase.addUser(jonathan);
         flightDatabase.addFlight(testFlight);
         flightDatabase.addFlight(testFlight2);
-//        System.out.println(flightDatabase);
-        flightDatabase.getAllFlights();
+        System.out.println(flightDatabase);
+//        flightDatabase.getAllFlights();
 
         flightDatabase.addPerson(testFlight, vinh);
-        System.out.println(testFlight);
+//        System.out.println(testFlight);
 
         String vinhID = vinh.getId();
         String tamaraID = tamara.getId();
 
-        flightDatabase.displayUserFLight(vinhID);
-        flightDatabase.displayUserFLight(tamaraID);
+        flightDatabase.addPersonUsingID(testFlight, tamaraID);
+        flightDatabase.displayUserFLight(tamara.getId());
+
+//        flightDatabase.displayUserFLight(vinhID);
+//        flightDatabase.displayUserFLight(tamaraID);
 
 
 

@@ -34,13 +34,21 @@ import java.util.UUID;
 
 public class FlightDatabase {
     private Flight[] allFlights;
+    private Person[] allUsers;
 
-public static int count;
+    public static int count;
+    public static int userCount;
 
-public FlightDatabase(){
-    this.allFlights = new Flight[Flight.count];
-}
+    public FlightDatabase(){
+        this.allFlights = new Flight[Flight.count];
+        this.allUsers = new Person[10];
+        this.userCount = 0;
+    }
 
+    public void addUser(Person user) {
+        allUsers[userCount] = user;
+        userCount++;
+    }
 
 
     //add flight to array and then plus1 to the next spot in the array for the next flight
@@ -70,12 +78,11 @@ public FlightDatabase(){
                 }
                 if (id.equals(person1.getId())){
                     System.out.println(flight);
-                }else {
-                    System.out.println("No flight booked");
+                    return;
                 }
             }
-
         }
+        System.out.println("No flight booked");
     };
 
     public void addPerson (Flight flight1, Person person1){
@@ -89,17 +96,24 @@ public FlightDatabase(){
         }
     }
 
-
-
-
-
-
+    public void addPersonUsingID (Flight flight1, String id) {
+        Person userToAdd;
+        for (Person user : allUsers) {
+            if (id.equals(user.getId())) {
+                userToAdd = user;
+                addPerson(flight1, userToAdd);
+                return;
+            }
+        }
+        System.out.println("User not found");
+    }
 
 
     @Override
     public String toString() {
         return "FlightDatabase{" +
                 "allFlights=" + Arrays.toString(allFlights) +
+                ", allUsers=" + Arrays.toString(allUsers) +
                 '}';
     }
 }
