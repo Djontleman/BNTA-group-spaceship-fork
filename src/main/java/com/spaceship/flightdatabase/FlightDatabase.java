@@ -30,6 +30,7 @@ import com.spaceship.person.Person;
 import com.spaceship.spaceship.Spaceship;
 
 import java.util.Arrays;
+import java.util.UUID;
 
 public class FlightDatabase {
     private Flight[] allFlights;
@@ -60,6 +61,19 @@ public FlightDatabase(){
             );
         }
     }
+
+    public void displayUserFLight(String id){
+        for(Flight flight: this.allFlights){
+            for(Person person1:flight.getPassengers()) {
+                if (id.equals(person1.getId())){
+                    System.out.println(flight);
+                }else {
+                    System.out.println("No flight booked");
+                }
+            }
+
+        }
+    };
 
     public void addPerson (Flight flight1, Person person1){
         if (flight1.getNumberOfPassengers() < flight1.getCapacity()){
