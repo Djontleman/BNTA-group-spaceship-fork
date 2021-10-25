@@ -61,9 +61,14 @@ public class Main {
         String vinhID = vinh.getId();
         String tamaraID = tamara.getId();
 
+        System.out.println(flightDatabase);
+
         flightDatabase.cancelFLight(testFlight, vinhID);
 
+        System.out.println(flightDatabase);
         flightDatabase.addPersonUsingID(testFlight, tamaraID);
+        System.out.println(flightDatabase);
+
         flightDatabase.displayUserFLight(tamara.getId());
 
 //        flightDatabase.displayUserFLight(vinhID);

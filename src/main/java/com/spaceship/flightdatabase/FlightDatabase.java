@@ -113,15 +113,28 @@ public class FlightDatabase {
         for (Person user: allUsers){
             if (id.equals(user.getId())){
                 userToRemove = user;
-                for(Person passenger: flight.getPassengers()){
-                    if(userToRemove.equals(passenger)){
-                        passenger = null;
+                for(int i = 0; i < flight.getPassengers().length; i++){
+                    if(userToRemove.equals(flight.getPassengers()[i])){
+                        flight.getPassengers()[i] = null;
                         System.out.println("Your flight has been successfully cancelled");
+
+                        flight.setNumberOfPassengers(0);
+
+                        Person[] updatedPassengers = new Person[flight.getCapacity()];
+                        for (Person passenger : flight.getPassengers()) {
+                            if (passenger != null) {
+                                updatedPassengers[flight.getNumberOfPassengers()] = passenger;
+                                flight.setNumberOfPassengers(flight.getNumberOfPassengers() + 1);
+                            }
+                        }
+                        flight.setPassengers(updatedPassengers);
                         return;
                     }
                 }
+                System.out.println("Error: User not found in flight");
             }
         }
+
     }
 
     @Override
