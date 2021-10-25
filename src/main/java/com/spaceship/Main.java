@@ -49,8 +49,8 @@ public class Main {
         FlightDatabase flightDatabase = new FlightDatabase();
         flightDatabase.addFlight(testFlight);
         flightDatabase.addFlight(testFlight2);
-        System.out.println(flightDatabase);
-        System.out.println(flightDatabase.getAllFlights());
+//        System.out.println(flightDatabase);
+        flightDatabase.getAllFlights();
 
 
 

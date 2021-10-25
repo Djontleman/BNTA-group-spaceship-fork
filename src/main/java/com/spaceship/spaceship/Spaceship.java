@@ -10,12 +10,14 @@ public class Spaceship {
     private String brand;
     private String model;
     private int capacity;
+    private int count;
 
     public Spaceship(String callSign, SpaceshipEnum spaceshipEnum) {
         this.callSign = callSign;
         this.brand = spaceshipEnum.getBrand();
         this.model = spaceshipEnum.getModel();
         this.capacity = spaceshipEnum.getCapacity();
+        this.count = 0;
     }
 
     public String getCallSign() {
@@ -48,6 +50,14 @@ public class Spaceship {
 
     public void setCapacity(int capacity) {
         this.capacity = capacity;
+    }
+
+    public int getCount() {
+        return count;
+    }
+
+    public void setCount(int count) {
+        this.count = count;
     }
 
     @Override

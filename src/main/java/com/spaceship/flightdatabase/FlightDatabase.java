@@ -45,13 +45,31 @@ public FlightDatabase(){
     public void addFlight(Flight flight1) {
         allFlights[this.count] = flight1;
         this.count++;
-            }
+        System.out.println("Successfully added flight");
+    }
 
 
 
-    public Flight[] getAllFlights() {
-        return allFlights;
-    }  @Override
+    public void getAllFlights() {
+        for (Flight flight: this.allFlights) {
+            System.out.println(
+                    "Flight Journey = " + flight.getFlightJourney() +
+                    ", Spaceship = " + flight.getSpaceship() +
+                    ", Seats Taken = " + flight.getSpaceship().getCount()
+            );
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+    @Override
     public String toString() {
         return "FlightDatabase{" +
                 "allFlights=" + Arrays.toString(allFlights) +
