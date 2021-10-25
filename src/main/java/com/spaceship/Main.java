@@ -10,12 +10,14 @@ package com.spaceship;
 import com.spaceship.booking.BookingSystem;
 import com.spaceship.flight.Flight;
 import com.spaceship.flight.FlightJourney;
+import com.spaceship.flightdatabase.FlightDatabase;
 import com.spaceship.passport.Nationality;
 import com.spaceship.passport.Passport;
 import com.spaceship.person.Gender;
 import com.spaceship.person.Person;
 
 import com.spaceship.spaceship.Spaceship;
+import com.spaceship.spaceship.SpaceshipEnum;
 import com.spaceship.usersession.UserSession;
 
 import java.io.IOException;
@@ -40,13 +42,21 @@ public class Main {
         Person tamara = new Person("Tamara Herrington", "email@gmail.email", 123455678, tamaraPassport);
         Person jonathan = new Person("Jonathan Hutchinson", "email@yahoo.email", 987654432, jonathanPassport);
 
+        Spaceship spaceship1 = new Spaceship("Spaceship1", SpaceshipEnum.AMAZON);
+        Flight testFlight = new Flight(spaceship1, FlightJourney.EARTHTOVULCAN);
+        Flight testFlight2 = new Flight(spaceship1, FlightJourney.EARTHTOVULCAN);
+
+        FlightDatabase flightDatabase = new FlightDatabase();
+        flightDatabase.addFlight(testFlight);
+        flightDatabase.addFlight(testFlight2);
+        System.out.println(flightDatabase);
+        System.out.println(spaceship1);
+        System.out.println(testFlight);
 
 
 
 
-
-
-        UserSession userSession = new UserSession();
-        userSession.start();
+       /* UserSession userSession = new UserSession();
+        userSession.start();*/
     }
 }

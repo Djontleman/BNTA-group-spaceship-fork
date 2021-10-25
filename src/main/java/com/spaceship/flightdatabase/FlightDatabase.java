@@ -16,15 +16,7 @@ package com.spaceship.flightdatabase;
 //        System.out.println(Arrays.toString(listOfFlights));
 //    }
 
-//        if (flight1.getCount() < flight1.getCapacity()){
-//        Person[] passengers = flight1.getPassengers();
-//        passengers[flight1.getCount()] = person1;
-//        flight1.setCount(flight1.getCount()+1);
-//        System.out.println("Welcome aboard!");
-//        } else {
-//        System.out.println("Sorry, we're full");
-//        }
-//        }
+
 
 // Method to remove person from flight (not finished)
 //    public void removePerson (SpaceshipService spaceship1, Person person1) {
@@ -34,17 +26,32 @@ package com.spaceship.flightdatabase;
 //    }
 
 import com.spaceship.flight.Flight;
+import com.spaceship.spaceship.Spaceship;
+
+import java.util.Arrays;
 
 public class FlightDatabase {
     private Flight[] allFlights;
+
+public static int count;
 
 public FlightDatabase(){
     this.allFlights = new Flight[Flight.count];
 }
 
-    public void addFlight() {
-
+    @Override
+    public String toString() {
+        return "FlightDatabase{" +
+                "allFlights=" + Arrays.toString(allFlights) +
+                '}';
     }
+
+    //add flight to array and then plus1 to the next spot in the array for the next flight
+    public void addFlight(Flight flight1) {
+        allFlights[this.count] = flight1;
+        this.count++;
+            }
+
 
 
     public Flight[] getAllFlights() {
