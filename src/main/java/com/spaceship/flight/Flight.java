@@ -12,7 +12,7 @@ public class Flight {
     private String spaceshipCallSign;
     private int capacity;
     private Person[] passengers;
-    private int count;
+    public static int count;
     private FlightJourney flightJourney;
 
     public Flight(Spaceship spaceship, FlightJourney flightJourney) {
@@ -20,7 +20,7 @@ public class Flight {
         this.spaceshipCallSign = spaceship.getCallSign();
         this.capacity = spaceship.getCapacity();
         this.passengers = new Person[capacity];
-        this.count = 0;
+        this.count ++;
         this.flightJourney = flightJourney;
     }
 

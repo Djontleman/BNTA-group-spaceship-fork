@@ -33,10 +33,14 @@ package com.spaceship.flightdatabase;
 //        ArrayUtils.remove(passengers, person1);
 //    }
 
+import com.spaceship.flight.Flight;
+
 public class FlightDatabase {
     private Flight[] allFlights;
 
-
+public FlightDatabase(){
+    this.allFlights = new Flight[Flight.count];
+}
 
     public void addFlight() {
 
