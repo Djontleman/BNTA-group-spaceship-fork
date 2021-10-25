@@ -108,6 +108,15 @@ public class FlightDatabase {
         System.out.println("User not found");
     }
 
+    public void cancelFLight(Flight flight, String id){
+        Person userToRemove;
+        for (Person user: allUsers){
+            if (id.equals(user.getId())){
+                userToRemove = user;
+                flight.getPassengers(/*ArrayUtils.remove(*/)
+            }
+        }
+    }
 
     @Override
     public String toString() {
