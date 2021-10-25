@@ -61,6 +61,8 @@ public class Main {
         String vinhID = vinh.getId();
         String tamaraID = tamara.getId();
 
+        flightDatabase.cancelFLight(testFlight, vinhID);
+
         flightDatabase.addPersonUsingID(testFlight, tamaraID);
         flightDatabase.displayUserFLight(tamara.getId());
 

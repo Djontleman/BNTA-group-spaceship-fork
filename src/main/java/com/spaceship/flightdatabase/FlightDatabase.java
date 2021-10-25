@@ -113,7 +113,13 @@ public class FlightDatabase {
         for (Person user: allUsers){
             if (id.equals(user.getId())){
                 userToRemove = user;
-                flight.getPassengers(/*ArrayUtils.remove(*/)
+                for(Person passenger: flight.getPassengers()){
+                    if(userToRemove.equals(passenger)){
+                        passenger = null;
+                        System.out.println("Your flight has been successfully cancelled");
+                        return;
+                    }
+                }
             }
         }
     }
