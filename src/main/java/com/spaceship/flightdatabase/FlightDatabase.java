@@ -71,6 +71,7 @@ public class FlightDatabase {
     }
 
     public void displayUserFLight(String id){
+        boolean flightsExist = false;
         for(Flight flight: this.allFlights){
             for(Person person1:flight.getPassengers()) {
                 if(person1 == null) {
@@ -78,11 +79,13 @@ public class FlightDatabase {
                 }
                 if (id.equals(person1.getId())){
                     System.out.println(flight);
-                    return;
+                    flightsExist = true;
                 }
             }
         }
-        System.out.println("No flight booked");
+        if (!flightsExist) {
+            System.out.println("No flight booked");
+        }
     };
 
     public void addPerson (Flight flight1, Person person1){

@@ -70,6 +70,7 @@ public class Main {
         System.out.println(flightDatabase);
 
         flightDatabase.displayUserFLight(tamara.getId());
+        flightDatabase.displayUserFLight(vinh.getId());
 
 //        flightDatabase.displayUserFLight(vinhID);
 //        flightDatabase.displayUserFLight(tamaraID);
