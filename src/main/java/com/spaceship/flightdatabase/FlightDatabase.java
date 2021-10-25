@@ -111,7 +111,19 @@ public class FlightDatabase {
         System.out.println("User not found");
     }
 
+    public Flight getFlightUsingString(String flightName) {
+        for (Flight flight: allFlights) {
+            if (flightName.equals(flight.getSpaceshipCallSign())) {
+                return flight;
+            }
+        }
+        return null;
+    }
     public void cancelFLight(Flight flight, String id){
+        if (flight == null) {
+            System.out.println("Error: flight not found");
+            return;
+        }
         Person userToRemove;
         for (Person user: allUsers){
             if (id.equals(user.getId())){

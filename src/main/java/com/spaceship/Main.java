@@ -44,7 +44,12 @@ public class Main {
 
         Spaceship spaceship1 = new Spaceship("Spaceship1", SpaceshipEnum.AMAZON);
         Flight testFlight = new Flight(spaceship1, FlightJourney.EARTHTOVULCAN);
-        Flight testFlight2 = new Flight(spaceship1, FlightJourney.EARTHTOVULCAN);
+        Spaceship spaceship2 = new Spaceship("Spaceship2", SpaceshipEnum.TESLA);
+        Flight testFlight2 = new Flight(spaceship2, FlightJourney.EARTHTOMARS);
+        Spaceship spaceship3 = new Spaceship("Spaceship3", SpaceshipEnum.USSENTERPRISE);
+        Flight testFlight3 = new Flight(spaceship3, FlightJourney.EARTHTOMARS);
+        Spaceship spaceship4 = new Spaceship("Spaceship4", SpaceshipEnum.VIRGIN);
+        Flight testFlight4 = new Flight(spaceship4, FlightJourney.MARSTOVENUS);
 
         FlightDatabase flightDatabase = new FlightDatabase();
         flightDatabase.addUser(vinh);
@@ -52,32 +57,36 @@ public class Main {
         flightDatabase.addUser(jonathan);
         flightDatabase.addFlight(testFlight);
         flightDatabase.addFlight(testFlight2);
-        System.out.println(flightDatabase);
+        flightDatabase.addFlight(testFlight3);
+        flightDatabase.addFlight(testFlight4);
+
+//        System.out.println(flightDatabase);
 //        flightDatabase.getAllFlights();
 
-        flightDatabase.addPerson(testFlight, vinh);
+//        flightDatabase.addPerson(testFlight, vinh);
 //        System.out.println(testFlight);
 
-        String vinhID = vinh.getId();
-        String tamaraID = tamara.getId();
+//        String vinhID = vinh.getId();
+//        String tamaraID = tamara.getId();
+        System.out.println(vinh.getId());
 
-        System.out.println(flightDatabase);
+//        System.out.println(flightDatabase);
 
-        flightDatabase.cancelFLight(testFlight, vinhID);
+//        flightDatabase.cancelFLight(testFlight, vinhID);
 
-        System.out.println(flightDatabase);
-        flightDatabase.addPersonUsingID(testFlight, tamaraID);
-        System.out.println(flightDatabase);
+//        System.out.println(flightDatabase);
+//        flightDatabase.addPersonUsingID(testFlight, tamaraID);
+//        System.out.println(flightDatabase);
 
-        flightDatabase.displayUserFLight(tamara.getId());
-        flightDatabase.displayUserFLight(vinh.getId());
+//        flightDatabase.displayUserFLight(tamara.getId());
+//        flightDatabase.displayUserFLight(vinh.getId());
 
 //        flightDatabase.displayUserFLight(vinhID);
 //        flightDatabase.displayUserFLight(tamaraID);
 
 
 
-       /* UserSession userSession = new UserSession();
-        userSession.start();*/
+        UserSession userSession = new UserSession();
+        userSession.start(flightDatabase);
     }
 }

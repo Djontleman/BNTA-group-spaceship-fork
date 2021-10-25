@@ -1,10 +1,15 @@
 package com.spaceship.usersession;
 
+import com.spaceship.booking.BookingSystem;
+import com.spaceship.flight.Flight;
+import com.spaceship.flightdatabase.FlightDatabase;
+
+import java.io.IOException;
 import java.util.Scanner;
 
 public class UserSession {
 
-    public void start() {
+    public void start(FlightDatabase flightDatabase) throws IOException {
 
         boolean session = true;
         do {
@@ -24,26 +29,35 @@ public class UserSession {
             switch(mainMenuResponse) {
                 case "1":
                     // View all flights
+                    flightDatabase.getAllFlights();
 
-                    System.out.println("Option 1 stuff goes here");
                     System.out.println();
                     break;
                 case "2":
                     // Book a new flight
+                    BookingSystem bookingSystem = new BookingSystem();
+                    bookingSystem.start();
 
                     System.out.println("Option 2 stuff goes here");
                     System.out.println();
                     break;
                 case "3":
                     // View booked flights
+                    System.out.print("Enter User ID: ");
+                    String response3 = scanner.nextLine();
+                    flightDatabase.displayUserFLight(response3);
 
-                    System.out.println("Option 3 stuff goes here");
                     System.out.println();
                     break;
                 case "4":
                     // Cancel a flight
+                    System.out.print("Enter flight: ");
+                    String response41 = scanner.nextLine();
+                    Flight response41AsFlight = flightDatabase.getFlightUsingString(response41);
+                    System.out.print("Enter User ID: ");
+                    String response42 = scanner.nextLine();
+                    flightDatabase.cancelFLight(response41AsFlight, response42);
 
-                    System.out.println("Option 4 stuff goes here");
                     System.out.println();
                     break;
                 case "5":
