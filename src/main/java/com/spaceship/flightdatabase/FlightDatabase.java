@@ -65,6 +65,9 @@ public FlightDatabase(){
     public void displayUserFLight(String id){
         for(Flight flight: this.allFlights){
             for(Person person1:flight.getPassengers()) {
+                if(person1 == null) {
+                    break;
+                }
                 if (id.equals(person1.getId())){
                     System.out.println(flight);
                 }else {

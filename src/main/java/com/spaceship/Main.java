@@ -55,7 +55,11 @@ public class Main {
         flightDatabase.addPerson(testFlight, vinh);
         System.out.println(testFlight);
 
-        flightDatabase.displayUserFLight("542a1452-ea9f-45b6-8537-731727715b47");
+        String vinhID = vinh.getId();
+        String tamaraID = tamara.getId();
+
+        flightDatabase.displayUserFLight(vinhID);
+        flightDatabase.displayUserFLight(tamaraID);
 
 
 
