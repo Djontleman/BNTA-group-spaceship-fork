@@ -52,6 +52,9 @@ public class Main {
 //        System.out.println(flightDatabase);
         flightDatabase.getAllFlights();
 
+        flightDatabase.addPerson(testFlight, vinh);
+        System.out.println(testFlight);
+
 
 
 

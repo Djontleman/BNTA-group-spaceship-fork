@@ -26,6 +26,7 @@ package com.spaceship.flightdatabase;
 //    }
 
 import com.spaceship.flight.Flight;
+import com.spaceship.person.Person;
 import com.spaceship.spaceship.Spaceship;
 
 import java.util.Arrays;
@@ -55,12 +56,21 @@ public FlightDatabase(){
             System.out.println(
                     "Flight Journey = " + flight.getFlightJourney() +
                     ", Spaceship = " + flight.getSpaceship() +
-                    ", Seats Taken = " + flight.getSpaceship().getCount()
+                    ", Seats Taken = " + flight.getNumberOfPassengers()
             );
         }
     }
 
-
+    public void addPerson (Flight flight1, Person person1){
+        if (flight1.getNumberOfPassengers() < flight1.getCapacity()){
+            Person[] passengers = flight1.getPassengers();
+            passengers[flight1.getNumberOfPassengers()] = person1;
+            flight1.setNumberOfPassengers(flight1.getNumberOfPassengers()+1);
+            System.out.println("Welcome aboard!");
+        } else {
+            System.out.println("Sorry, we're full");
+        }
+    }
 
 
 
