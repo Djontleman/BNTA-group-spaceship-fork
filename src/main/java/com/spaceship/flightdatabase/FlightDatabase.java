@@ -1,13 +1,39 @@
 package com.spaceship.flightdatabase;
 
-import com.spaceship.flight.Flight;
+// List of potential Methods:
+// - listAllFlights
 
-import java.util.Arrays;
+// - addFlight
+// - removeFlight
 
-//  In future include writing to file functionality
+// - getOpenFlights
+// - listOpenFlights
+// - getFullFlights
+// - listFullFlights
+
+// Method to list all flights (not finished)
+//    public static void showFlights (Spaceship[] listOfFlights) {
+//        System.out.println(Arrays.toString(listOfFlights));
+//    }
+
+//        if (flight1.getCount() < flight1.getCapacity()){
+//        Person[] passengers = flight1.getPassengers();
+//        passengers[flight1.getCount()] = person1;
+//        flight1.setCount(flight1.getCount()+1);
+//        System.out.println("Welcome aboard!");
+//        } else {
+//        System.out.println("Sorry, we're full");
+//        }
+//        }
+
+// Method to remove person from flight (not finished)
+//    public void removePerson (SpaceshipService spaceship1, Person person1) {
+//        Person[] passengers = spaceship1.getPassengers();
+//        Arrays.asList(passengers).contains(person1.getId());
+//        ArrayUtils.remove(passengers, person1);
+//    }
 
 public class FlightDatabase {
-
     private Flight[] allFlights;
 
 
