@@ -1,10 +1,15 @@
 package com.spaceship.flightdatabase.flight.spaceship;
 
 public enum SpaceshipEnum {
-    TESLA("Tesla", "model",5),
-    AMAZON("Amazon", "model", 4),
-    USSENTERPRISE("USSEnterprise","FederationStarship", 950 ),
-    VIRGIN("Virgin", "model", 30);
+
+    // Capacities are not fact
+    SXF9("SpaceX", "Falcon 9",5),
+    SXFH("SpaceX", "Falcon Heavy", 8),
+    BONG("Blue Origin", "New Glenn", 4),
+    BOBM("Blue Origin", "Blue Moon", 5),
+    VGSS1("Virgin Galactic", "SpaceShipOne", 2),
+    VGSS2("Virgin Galactic", "SpaceShipTwo", 10);
+//    USSENTERPRISE("USSEnterprise","FederationStarship", 950),
 
     private final String brand;
     private final String model;
