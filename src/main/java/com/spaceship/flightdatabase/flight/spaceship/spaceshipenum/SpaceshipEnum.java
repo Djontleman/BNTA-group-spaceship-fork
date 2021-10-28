@@ -32,4 +32,13 @@ public enum SpaceshipEnum {
     public int getCapacity(){
         return capacity;
     }
+
+    @Override
+    public String toString() {
+        return "SpaceshipEnum{" +
+                "brand='" + brand + '\'' +
+                ", model='" + model + '\'' +
+                ", capacity=" + capacity +
+                '}';
+    }
 }
