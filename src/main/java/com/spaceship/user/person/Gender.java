@@ -1,4 +1,4 @@
-package com.spaceship.person;
+package com.spaceship.user.person;
 
 public enum Gender {
     FEMALE,

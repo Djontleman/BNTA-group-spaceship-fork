@@ -26,7 +26,7 @@ package com.spaceship.flightdatabase;
 //    }
 
 import com.spaceship.flightdatabase.flight.Flight;
-import com.spaceship.person.Person;
+import com.spaceship.user.person.Person;
 
 import java.util.Arrays;
 

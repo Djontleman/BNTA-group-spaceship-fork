@@ -1,9 +1,6 @@
 package com.spaceship.user;
 
-import com.spaceship.person.passport.Passport;
-
 import java.util.Objects;
-import java.util.UUID;
 
 public class User {
     private String id;

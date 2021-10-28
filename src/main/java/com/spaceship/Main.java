@@ -10,10 +10,10 @@ package com.spaceship;
 import com.spaceship.flightdatabase.flight.Flight;
 import com.spaceship.flightdatabase.flight.FlightJourney;
 import com.spaceship.flightdatabase.FlightDatabase;
-import com.spaceship.person.passport.Nationality;
-import com.spaceship.person.passport.Passport;
-import com.spaceship.person.Gender;
-import com.spaceship.person.Person;
+import com.spaceship.user.person.passport.Nationality;
+import com.spaceship.user.person.passport.Passport;
+import com.spaceship.user.person.Gender;
+import com.spaceship.user.person.Person;
 
 import com.spaceship.flightdatabase.flight.spaceship.Spaceship;
 import com.spaceship.flightdatabase.flight.spaceship.SpaceshipEnum;

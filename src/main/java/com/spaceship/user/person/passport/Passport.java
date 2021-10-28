@@ -1,6 +1,6 @@
-package com.spaceship.person.passport;
+package com.spaceship.user.person.passport;
 
-import com.spaceship.person.Gender;
+import com.spaceship.user.person.Gender;
 
 import java.time.LocalDate;
 import java.util.Objects;
