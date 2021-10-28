@@ -16,7 +16,7 @@ import com.spaceship.user.person.Gender;
 import com.spaceship.user.person.Person;
 
 import com.spaceship.flightdatabase.flight.spaceship.Spaceship;
-import com.spaceship.flightdatabase.flight.spaceship.SpaceshipEnum;
+import com.spaceship.flightdatabase.flight.spaceship.spaceshipenum.SpaceshipEnum;
 import com.spaceship.usersession.UserSession;
 
 import java.io.IOException;

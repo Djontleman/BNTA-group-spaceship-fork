@@ -1,5 +1,7 @@
 package com.spaceship.flightdatabase.flight.spaceship;
 
+import com.spaceship.flightdatabase.flight.spaceship.spaceshipenum.SpaceshipEnum;
+
 import java.util.Objects;
 
 public class Spaceship {
