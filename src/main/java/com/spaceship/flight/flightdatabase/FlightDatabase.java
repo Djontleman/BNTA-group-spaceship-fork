@@ -1,4 +1,4 @@
-package com.spaceship.flightdatabase;
+package com.spaceship.flight.flightdatabase;
 
 // List of potential Methods:
 // - listAllFlights

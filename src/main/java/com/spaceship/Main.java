@@ -9,7 +9,7 @@ package com.spaceship;
 
 import com.spaceship.flight.Flight;
 import com.spaceship.flight.journey.FlightJourney;
-import com.spaceship.flightdatabase.FlightDatabase;
+import com.spaceship.flight.flightdatabase.FlightDatabase;
 import com.spaceship.user.person.passport.Nationality;
 import com.spaceship.user.person.passport.Passport;
 import com.spaceship.user.person.Gender;
