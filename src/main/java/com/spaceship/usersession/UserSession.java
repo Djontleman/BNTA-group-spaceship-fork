@@ -2,14 +2,14 @@ package com.spaceship.usersession;
 
 import com.spaceship.booking.BookingSystem;
 import com.spaceship.flight.Flight;
-import com.spaceship.flight.flightdatabase.FlightDatabase;
+import com.spaceship.flight.flightdatabase.FlightFileDataAccessService;
 
 import java.io.IOException;
 import java.util.Scanner;
 
 public class UserSession {
 
-    public void start(FlightDatabase flightDatabase) throws IOException {
+    public void start(FlightFileDataAccessService flightFileDataAccessService) throws IOException {
 
         boolean session = true;
         do {
@@ -29,7 +29,7 @@ public class UserSession {
             switch(mainMenuResponse) {
                 case "1":
                     // View all flights
-                    flightDatabase.getAllFlights();
+                    flightFileDataAccessService.getAllFlights();
 
                     System.out.println();
                     break;
@@ -45,7 +45,7 @@ public class UserSession {
                     // View booked flights
                     System.out.print("Enter User ID: ");
                     String response3 = scanner.nextLine();
-                    flightDatabase.displayUserFLight(response3);
+                    flightFileDataAccessService.displayUserFLight(response3);
 
                     System.out.println();
                     break;
@@ -53,10 +53,10 @@ public class UserSession {
                     // Cancel a flight
                     System.out.print("Enter flight: ");
                     String response41 = scanner.nextLine();
-                    Flight response41AsFlight = flightDatabase.getFlightUsingString(response41);
+                    Flight response41AsFlight = flightFileDataAccessService.getFlightUsingString(response41);
                     System.out.print("Enter User ID: ");
                     String response42 = scanner.nextLine();
-                    flightDatabase.cancelFLight(response41AsFlight, response42);
+                    flightFileDataAccessService.cancelFLight(response41AsFlight, response42);
 
                     System.out.println();
                     break;

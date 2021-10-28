@@ -9,7 +9,7 @@ package com.spaceship;
 
 import com.spaceship.flight.Flight;
 import com.spaceship.flight.journey.FlightJourney;
-import com.spaceship.flight.flightdatabase.FlightDatabase;
+import com.spaceship.flight.flightdatabase.FlightFileDataAccessService;
 import com.spaceship.user.person.passport.Nationality;
 import com.spaceship.user.person.passport.Passport;
 import com.spaceship.user.person.Gender;
@@ -49,14 +49,14 @@ public class Main {
         Spaceship spaceship4 = new Spaceship("Spaceship4", SpaceshipEnum.VIRGIN);
         Flight testFlight4 = new Flight(spaceship4, FlightJourney.MARSTOVENUS);
 
-        FlightDatabase flightDatabase = new FlightDatabase();
-        flightDatabase.addUser(vinh);
-        flightDatabase.addUser(tamara);
-        flightDatabase.addUser(jonathan);
-        flightDatabase.addFlight(testFlight);
-        flightDatabase.addFlight(testFlight2);
-        flightDatabase.addFlight(testFlight3);
-        flightDatabase.addFlight(testFlight4);
+        FlightFileDataAccessService flightFileDataAccessService = new FlightFileDataAccessService();
+        flightFileDataAccessService.addUser(vinh);
+        flightFileDataAccessService.addUser(tamara);
+        flightFileDataAccessService.addUser(jonathan);
+        flightFileDataAccessService.addFlight(testFlight);
+        flightFileDataAccessService.addFlight(testFlight2);
+        flightFileDataAccessService.addFlight(testFlight3);
+        flightFileDataAccessService.addFlight(testFlight4);
 
 //        System.out.println(flightDatabase);
 //        flightDatabase.getAllFlights();
@@ -85,6 +85,6 @@ public class Main {
 
 
         UserSession userSession = new UserSession();
-        userSession.start(flightDatabase);
+        userSession.start(flightFileDataAccessService);
     }
 }

@@ -11,42 +11,28 @@ package com.spaceship.flight.flightdatabase;
 // - getFullFlights
 // - listFullFlights
 
-// Method to list all flights (not finished)
-//    public static void showFlights (Spaceship[] listOfFlights) {
-//        System.out.println(Arrays.toString(listOfFlights));
-//    }
-
-
-
-// Method to remove person from flight (not finished)
-//    public void removePerson (SpaceshipService spaceship1, Person person1) {
-//        Person[] passengers = spaceship1.getPassengers();
-//        Arrays.asList(passengers).contains(person1.getId());
-//        ArrayUtils.remove(passengers, person1);
-//    }
-
 import com.spaceship.flight.Flight;
 import com.spaceship.user.person.Person;
 
 import java.util.Arrays;
 
-public class FlightDatabase {
+public class FlightFileDataAccessService {
     private Flight[] allFlights;
-    private Person[] allUsers;
+//    private Person[] allUsers;
 
     public static int count;
     public static int userCount;
 
-    public FlightDatabase(){
+    public FlightFileDataAccessService(){
         this.allFlights = new Flight[Flight.count];
-        this.allUsers = new Person[10];
-        this.userCount = 0;
+//        this.allUsers = new Person[10];
+//        this.userCount = 0;
     }
 
-    public void addUser(Person user) {
-        allUsers[userCount] = user;
-        userCount++;
-    }
+//    public void addUser(Person user) {
+//        allUsers[userCount] = user;
+//        userCount++;
+//    }
 
 
     //add flight to array and then plus1 to the next spot in the array for the next flight
