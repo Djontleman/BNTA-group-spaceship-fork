@@ -1,6 +1,7 @@
 package com.spaceship.flightdatabase.flight;
 
 import com.spaceship.flightdatabase.flight.journey.FlightJourney;
+import com.spaceship.user.User;
 import com.spaceship.user.person.Person;
 import com.spaceship.flightdatabase.flight.spaceship.Spaceship;
 
@@ -9,21 +10,23 @@ import java.util.Objects;
 
 public class Flight {
 
+    // todo: sort out flight count:
+    // public static int count; this.count ++;
+    // todo: business logic for passengers array
+
     private Spaceship spaceship;
-    private String spaceshipCallSign;
+//    private String spaceshipCallSign;
     private int capacity;
-    private Person[] passengers;
+    private User[] passengers;
     private int numberOfPassengers;
-    public static int count;
     private FlightJourney flightJourney;
 
-    public Flight(Spaceship spaceship, FlightJourney flightJourney) {
+    public Flight(Spaceship spaceship,  FlightJourney flightJourney) {
         this.spaceship = spaceship;
-        this.spaceshipCallSign = spaceship.getCallSign();
+//        this.spaceshipCallSign = spaceship.getCallSign();
         this.capacity = spaceship.getCapacity();
-        this.passengers = new Person[capacity];
+        this.passengers = new User[capacity];
         this.numberOfPassengers = 0;
-        this.count ++;
         this.flightJourney = flightJourney;
     }
 
@@ -35,14 +38,6 @@ public class Flight {
         this.spaceship = spaceship;
     }
 
-    public String getSpaceshipCallSign() {
-        return spaceshipCallSign;
-    }
-
-    public void setSpaceshipCallSign(String spaceshipCallSign) {
-        this.spaceshipCallSign = spaceshipCallSign;
-    }
-
     public int getCapacity() {
         return capacity;
     }
@@ -51,11 +46,11 @@ public class Flight {
         this.capacity = capacity;
     }
 
-    public Person[] getPassengers() {
+    public User[] getPassengers() {
         return passengers;
     }
 
-    public void setPassengers(Person[] passengers) {
+    public void setPassengers(User[] passengers) {
         this.passengers = passengers;
     }
 
@@ -65,14 +60,6 @@ public class Flight {
 
     public void setNumberOfPassengers(int numberOfPassengers) {
         this.numberOfPassengers = numberOfPassengers;
-    }
-
-    public int getCount() {
-        return count;
-    }
-
-    public void setCount(int count) {
-        this.count = count;
     }
 
     public FlightJourney getFlightJourney() {
@@ -87,10 +74,9 @@ public class Flight {
     public String toString() {
         return "Flight{" +
                 "spaceship=" + spaceship +
-                ", spaceshipCallSign='" + spaceshipCallSign + '\'' +
                 ", capacity=" + capacity +
                 ", passengers=" + Arrays.toString(passengers) +
-                ", count=" + count +
+                ", numberOfPassengers=" + numberOfPassengers +
                 ", flightJourney=" + flightJourney +
                 '}';
     }
@@ -100,12 +86,12 @@ public class Flight {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Flight flight = (Flight) o;
-        return capacity == flight.capacity && count == flight.count && Objects.equals(spaceship, flight.spaceship) && Objects.equals(spaceshipCallSign, flight.spaceshipCallSign) && Arrays.equals(passengers, flight.passengers) && flightJourney == flight.flightJourney;
+        return capacity == flight.capacity && numberOfPassengers == flight.numberOfPassengers && Objects.equals(spaceship, flight.spaceship) && Arrays.equals(passengers, flight.passengers) && flightJourney == flight.flightJourney;
     }
 
     @Override
     public int hashCode() {
-        int result = Objects.hash(spaceship, spaceshipCallSign, capacity, count, flightJourney);
+        int result = Objects.hash(spaceship, capacity, numberOfPassengers, flightJourney);
         result = 31 * result + Arrays.hashCode(passengers);
         return result;
     }
