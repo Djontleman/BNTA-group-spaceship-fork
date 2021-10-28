@@ -25,7 +25,7 @@ package com.spaceship.flightdatabase;
 //        ArrayUtils.remove(passengers, person1);
 //    }
 
-import com.spaceship.flightdatabase.flight.Flight;
+import com.spaceship.flight.Flight;
 import com.spaceship.user.person.Person;
 
 import java.util.Arrays;

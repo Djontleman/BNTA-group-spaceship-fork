@@ -1,6 +1,6 @@
-package com.spaceship.flightdatabase.flight.spaceship;
+package com.spaceship.flight.spaceship;
 
-import com.spaceship.flightdatabase.flight.spaceship.spaceshipenum.SpaceshipEnum;
+import com.spaceship.flight.spaceship.spaceshipenum.SpaceshipEnum;
 
 import java.util.Objects;
 

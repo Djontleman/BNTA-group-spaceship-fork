@@ -1,9 +1,8 @@
-package com.spaceship.flightdatabase.flight;
+package com.spaceship.flight;
 
-import com.spaceship.flightdatabase.flight.journey.FlightJourney;
+import com.spaceship.flight.journey.FlightJourney;
 import com.spaceship.user.User;
-import com.spaceship.user.person.Person;
-import com.spaceship.flightdatabase.flight.spaceship.Spaceship;
+import com.spaceship.flight.spaceship.Spaceship;
 
 import java.util.Arrays;
 import java.util.Objects;

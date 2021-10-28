@@ -1,4 +1,4 @@
-package com.spaceship.flightdatabase.flight.spaceship;
+package com.spaceship.flight.spaceship;
 
 public class SpaceshipService {
 

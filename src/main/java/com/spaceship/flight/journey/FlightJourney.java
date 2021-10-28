@@ -1,4 +1,4 @@
-package com.spaceship.flightdatabase.flight.journey;
+package com.spaceship.flight.journey;
 
 public enum FlightJourney {
 

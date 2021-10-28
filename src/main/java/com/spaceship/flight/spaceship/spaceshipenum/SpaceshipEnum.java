@@ -1,4 +1,4 @@
-package com.spaceship.flightdatabase.flight.spaceship.spaceshipenum;
+package com.spaceship.flight.spaceship.spaceshipenum;
 
 public enum SpaceshipEnum {
 

@@ -7,16 +7,16 @@ package com.spaceship;
 //        Option 5 Book a flight for a user using his id
 //        Option 6 Cancel a flight
 
-import com.spaceship.flightdatabase.flight.Flight;
-import com.spaceship.flightdatabase.flight.journey.FlightJourney;
+import com.spaceship.flight.Flight;
+import com.spaceship.flight.journey.FlightJourney;
 import com.spaceship.flightdatabase.FlightDatabase;
 import com.spaceship.user.person.passport.Nationality;
 import com.spaceship.user.person.passport.Passport;
 import com.spaceship.user.person.Gender;
 import com.spaceship.user.person.Person;
 
-import com.spaceship.flightdatabase.flight.spaceship.Spaceship;
-import com.spaceship.flightdatabase.flight.spaceship.spaceshipenum.SpaceshipEnum;
+import com.spaceship.flight.spaceship.Spaceship;
+import com.spaceship.flight.spaceship.spaceshipenum.SpaceshipEnum;
 import com.spaceship.usersession.UserSession;
 
 import java.io.IOException;
