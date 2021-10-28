@@ -8,7 +8,7 @@ package com.spaceship;
 //        Option 6 Cancel a flight
 
 import com.spaceship.flightdatabase.flight.Flight;
-import com.spaceship.flightdatabase.flight.FlightJourney;
+import com.spaceship.flightdatabase.flight.journey.FlightJourney;
 import com.spaceship.flightdatabase.FlightDatabase;
 import com.spaceship.user.person.passport.Nationality;
 import com.spaceship.user.person.passport.Passport;

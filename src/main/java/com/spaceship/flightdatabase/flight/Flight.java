@@ -1,5 +1,6 @@
 package com.spaceship.flightdatabase.flight;
 
+import com.spaceship.flightdatabase.flight.journey.FlightJourney;
 import com.spaceship.user.person.Person;
 import com.spaceship.flightdatabase.flight.spaceship.Spaceship;
 
