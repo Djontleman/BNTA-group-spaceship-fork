@@ -40,6 +40,11 @@ public class FlightFileDataAccessService {
 
     // ====== Getters and Setters ======//
 
+
+    public Flight[] getAllFlights() {
+        return allFlights;
+    }
+
     public void setAllFlights(Flight[] allFlights) {
         this.allFlights = allFlights;
     }
@@ -54,10 +59,6 @@ public class FlightFileDataAccessService {
 
 
     // ====== Methods ====== //
-
-    public Flight[] getFlights() {
-        return allFlights;
-    }
 
     public void addFlight(Flight flight) {
         allFlights[this.numberOfFlights] = flight;
